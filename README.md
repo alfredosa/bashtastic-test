@@ -16,7 +16,33 @@ The output should be in a directory called listings and the test expects 2 files
 
 ## 3 Converting for loops to while and until loops
 
-Convert the for loops in Example 11-1 to while loops. Hint: store the data in an array and step through the array elements.
+Convert the for loops in this script to while loops. 
+
+```bash
+
+#!/bin/bash
+# Listing the planets.
+
+for planet in Mercury Venus Earth Mars Jupiter Saturn Uranus Neptune Pluto
+do
+  echo $planet  # Each planet on a separate line.
+done
+
+echo; echo
+
+for planet in "Mercury Venus Earth Mars Jupiter Saturn Uranus Neptune Pluto"
+    # All planets on same line.
+    # Entire 'list' enclosed in quotes creates a single variable.
+    # Why? Whitespace incorporated into the variable.
+do
+  echo $planet
+done
+
+echo; echo "Whoops! Pluto is no longer a planet!"
+
+exit 0
+```
+Hint: store the data in an array and step through the array elements.
 
 Having already done the "heavy lifting," now convert the loops in the example to until loops.
 

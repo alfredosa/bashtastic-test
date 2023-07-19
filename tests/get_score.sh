@@ -1,7 +1,6 @@
 #!/bin/bash
 tput setaf 3
-echo "Running score program"
-echo; echo
+printf "Running score program\n\n"
 current_directory=$(pwd)
 total_points=0
 
@@ -133,30 +132,24 @@ fi
 
 echo; echo
 score=$(printf "%.2f" "$(echo "scale=2; 100 * $total_points / 5" | bc -l)")
-if [ $(echo "$score >= 100.0" | bc -l) -eq 1 ]; then
-    tput setaf 2
-    echo "Congratulations! You got a perfect A++ score!"
-    tput sgr0
-elif [ $(echo "$score >= 90.0" | bc -l) -eq 1 ]; then
-    tput setaf 2
-    echo "Congratulations! You got an A!"
-    tput sgr0
-elif [ $(echo "$score >= 80.0" | bc -l) -eq 1 ]; then
-    tput setaf 2
-    echo "Congratulations! You got a B!"
-    tput sgr0
-elif [ $(echo "$score >= 70.0" | bc -l) -eq 1 ]; then
-    tput setaf 2
-    echo "Congratulations! You got a C!"
-    tput sgr0
-elif [ $(echo "$score >= 60.0" | bc -l) -eq 1 ]; then
-    tput setaf 2
-    echo "Congratulations! You got a D!"
-    tput sgr0
-else
-    tput setaf 1
-    echo "You got an F. Try again!"
-    tput sgr0
-fi
+
+# Read the score messages from the JSON file
+json_file="tests/score_messages.json"
+score_messages=$(jq -r 'to_entries[] | "\(.key)=\(.value)"' "$json_file")
+
+tmp_file=$(mktemp)
+
+printf "%s\n" "$score_messages" > "$tmp_file"
+
+while IFS="=" read -r threshold message; do
+    if [ "$(echo "$score >= $threshold" | bc -l)" -eq 1 ]; then
+        tput setaf 2
+        echo "$message"
+        tput sgr0
+        break
+    fi
+done < "$tmp_file"
+
+rm "$tmp_file"
 
 

@@ -1,0 +1,16 @@
+{
+    "100.0": "Congratulations! You got a perfect A++ score!",
+    "98.0": "Congratulations! You got an A+!",
+    "95.0": "Congratulations! You got an A!",
+    "92.0": "Great job! You got an A-!",
+    "89.0": "Well done! You got a B+!",
+    "86.0": "Good job! You got a B!",
+    "83.0": "Nice work! You got a B-!",
+    "80.0": "Good work! You got a C+!",
+    "77.0": "You got a C!",
+    "74.0": "You got a C-!",
+    "71.0": "You got a D+!",
+    "68.0": "You got a D!",
+    "65.0": "You got a D-!",
+    "0.0": "You got an F. Try again!"
+  }

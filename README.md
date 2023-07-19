@@ -1,5 +1,18 @@
 # Shell Problems
 
+## Ackowledgements
+
+Thanks to [The Linux Documentation Project](https://www.tldp.org/) for providing the problems 🫀 Go in there and learn some bash 😃
+
+## Test your results
+
+Once finished with your scripts and problems below, run 
+```bash 
+make test
+```
+
+and check your score! 🎉🚀
+
 ## 1 Self-reproducing Script
 
 Write a script that backs itself up, that is, copies itself to a file named ```backup.sh``` inside a folder called ```backups```.

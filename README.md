@@ -2,7 +2,7 @@
 
 ## Ackowledgements
 
-Thansk to [The Linux Documentation Project](https://www.tldp.org/) for providing the problems 🫀 Go in there and learn some bash 😃
+Thanks to [The Linux Documentation Project](https://www.tldp.org/) for providing the problems 🫀 Go in there and learn some bash 😃
 
 ## Test your results
 

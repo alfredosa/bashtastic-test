@@ -1,8 +1,17 @@
 # Shell Problems
 
+## Ackowledgements
+
+Thansk to [The Linux Documentation Project](https://www.tldp.org/) for providing the problems 🫀 Go in there and learn some bash 😃
+
 ## Test your results
 
-Once finished with your scripts and problems below, run ```bash make test``` and check your score.
+Once finished with your scripts and problems below, run 
+```bash 
+make test
+```
+
+and check your score! 🎉🚀
 
 ## 1 Self-reproducing Script
 

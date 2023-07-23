@@ -60,7 +60,7 @@ Hint: store the data in an array and step through the array elements.
 Having already done the "heavy lifting," now convert the loops in the example to until loops.
 
 ## 4 Changing the line spacing of a text file
-Write a script that reads each line of a target file, then writes the line back to stdout, but with an extra blank line following. This has the effect of double-spacing the file.
+Write a script that reads each line of `util_files/some_poem.txt`, then writes the line back to stdout, but with an extra blank line following. This has the effect of double-spacing the file.
 
 Include all necessary code to check whether the script gets the necessary command-line argument (a filename), and whether the specified file exists.
 

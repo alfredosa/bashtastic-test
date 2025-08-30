@@ -1,5 +1,9 @@
 # Shell Problems
 
+> [!WARNING]
+> This project is now officially migrated to https://git.alfie.news/bashtastic-test
+> I will likely delete this sometime.
+
 ## Ackowledgements
 
 Thanks to [The Linux Documentation Project](https://www.tldp.org/) for providing the problems 🫀 Go in there and learn some bash 😃
